@@ -1,0 +1,28 @@
+You may only use the WHERE clause to filter individual rows, not groups of rows.
+
+To filter groups of rows you use the HAVING clause.
+SQL> SELECT city, AVG(salary)
+  2      FROM employee
+  3      WHERE AVG(salary) > 20
+  4      GROUP BY city;
+    WHERE AVG(salary) > 20
+---------------------------------------------
+
+iki tablonun birleþim iþleminde indexleme çok önemlidir.
+------------------------
+The execution order is then:
+SELECT,
+FROM,
+WHERE,
+GROUP BY,
+HAVING,
+the analytical function, and
+then the final ORDER BY.
+----------------------------------------
+
+/   pl/sql'de yazdýðýmýz bloðun tamamlandýðýný gösterir.
+
+
+
+
+
